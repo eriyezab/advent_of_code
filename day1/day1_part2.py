@@ -1,3 +1,4 @@
+import time
 filename = "input.txt"
 #filename = "test_input.txt"
 numbers = '1234567890'
@@ -67,7 +68,7 @@ def main():
             #print(first)
             last = find_last(line)
             #print(last)
-            print(int(first + last))
+            #print(int(first + last))
             res += int(first + last)
             line = f.readline()
         return res
@@ -76,4 +77,7 @@ def main():
             
     
 if __name__ == "__main__":
+    start = time.time()
     print(main())
+    end = time.time()
+    print(end - start)
